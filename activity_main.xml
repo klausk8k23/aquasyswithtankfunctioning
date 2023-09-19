@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/user"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/lightgreen"
+        android:text="Logout"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:onClick="ShowPopup"
+        android:id="@+id/imgFollow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/butblue"
+        app:srcCompat="@drawable/baseline_info_24"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="220dp"
+        android:layout_height="180dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/aq" />
+
+    <com.example.remote2.WaveProgressBar
+        android:id="@+id/waveProgressbar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-206dp"
+        app:arc_color="#fff"
+        app:behind_wave_color="#01A1D6"
+        app:cavans_bg="#fff"
+        app:front_wave_color="#9DD8ED"
+        app:progress="0"
+        app:shape="circle"
+        app:text_follow_progress="true"
+        app:text_size="20sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_marginTop="450dp">
+
+        <Button
+            android:id="@+id/btnOn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/lightgreen"
+            android:text="On"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnOff"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_margin="3dp"
+            android:text="off"
+            android:textSize="20dp"
+            android:backgroundTint="@color/lightred"/>
+
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/btnSched"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_margin="3dp"
+            android:drawableLeft="@drawable/baseline_calendar_today_24"
+            android:backgroundTint="@color/butblue"
+            android:text="Set Schedule"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/distance"
+            android:text="-----"/>
+    </LinearLayout>
+</RelativeLayout>
